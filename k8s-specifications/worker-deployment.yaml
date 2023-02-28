@@ -17,3 +17,15 @@ spec:
       containers:
       - image: dockersamples/examplevotingapp_worker
         name: worker
+        env:
+        - name: SECRET_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: example-secret
+              key: username
+        - name: SECRET_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: example-secret
+              key: password
+
