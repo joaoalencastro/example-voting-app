@@ -31,8 +31,9 @@ RUN  case ${TARGETPLATFORM} in \
     && dotnet publish -c release -o /app -r linux-${ARCH} --self-contained false --no-restore
 
 # my modification
-ENV SECRET_USERNAME
-ENV SECRET_PASSWORD
+#ENV SECRET_USERNAME
+#ENV SECRET_PASSWORD
+#ENV SECRET
 
 # app image
 FROM mcr.microsoft.com/dotnet/runtime:7.0

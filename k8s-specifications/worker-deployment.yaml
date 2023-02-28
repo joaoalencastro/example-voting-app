@@ -28,4 +28,9 @@ spec:
             secretKeyRef:
               name: example-secret
               key: password
+        - name: SERVER
+          valueFrom:
+            secretKeyRef:
+              name: example-secret
+              key: Server
 
